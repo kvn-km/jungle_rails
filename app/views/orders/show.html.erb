@@ -8,6 +8,22 @@
     <h4>Thank you for your order!</h4>
   </div>
 
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">product</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.line_items.each do |item| %>
+        <%= render "orders/order_details", product: item.product, quantity: item.quantity.to_i %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <hr>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
