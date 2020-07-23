@@ -1,2 +1,31 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-3">
+      <div class="well products">
+        <h4 class="alert-heading text-center">
+          <%= link_to "PRODUCTS", [:admin, :products] %>
+        </h4>
+        <hr>
+        <p>
+        <h1 class="text-center"><%= @products.count %></h1>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div class="well products">
+        <h4 class="alert-heading text-center">
+
+        </h4>
+        <hr>
+        <p>
+        <h1 class="text-center"><%= @category.count%></h1>
+        </p>
+      </div>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+
+</div>
