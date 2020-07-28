@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe Product, type: :model do
   
   describe "Validations" do
-    
-    
-    
+        
     it "saves new category and product" do
       @test_category = Category.new(name: "TestCat")
       @test_product = Product.new(
