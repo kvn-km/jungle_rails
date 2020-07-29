@@ -7,10 +7,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     
     if @user.save
+      @user.save!
       session[:user_id] = @user.id
-      redirect_to '/', notice: 'Account created successfully'
+      redirect_to '/', :flash => { :notice => 'Account created successfully'}
     else
-      redirect_to '/signup', notice: "Error creating account"
+      redirect_to '/signup', :flash => { :notice => "Error creating account" }
     end
   end
 
